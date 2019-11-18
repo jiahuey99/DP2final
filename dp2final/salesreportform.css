@@ -1,0 +1,57 @@
+*{
+	font-family:Times New Roman;
+}
+
+#title{
+	text-align:center;
+	border-bottom:1px solid black;
+	font-size:30px;
+	font-weight:bold;
+	padding-top:30px;
+	width:100%;
+	
+}
+
+fieldset{
+	margin:30px auto 5px auto;
+	width: 60%;
+	background-color:#f5f6fa;
+}
+
+legend{
+	color:white;
+	background-color:#101f3d;
+	padding:5px 30px;
+}
+input[type="date"]{
+		text-align:left;
+		margin-right:20%;
+		margin-top:20px;
+}
+
+input[type="submit"]{
+	border-color:white;
+	border-style:outset;
+	outline: none;
+	background-color:#101f3d;
+	color:white;
+	
+	font-weight:bold;
+	
+	
+	text-align:center;
+	margin-right:20px;
+	border-radius:12px;
+	float:right;
+	
+	 padding:6px 6px;
+		  font-weight:bold;
+		  font-size: 15px;
+		  width:100px;
+}
+
+input[type="submit"]:hover{
+	background-color: white;
+	border-color:#101f3d;
+	color:black;
+}

@@ -1,0 +1,92 @@
+*{
+			font-family: Times New Roman;
+		}
+#title{
+		text-align:center;
+		border-bottom:1px solid black;
+		font-size:30px;
+		font-weight:bold;
+		padding-top:30px;
+		width:100%;
+	
+}
+#tablelist{
+			width:40%;
+			
+			margin-left:10%;
+			 text-align: center;
+			
+			
+		}
+		
+		#tablelist tr:nth-child(even){background-color:#f5f6fa;}
+		#tablelist tr:nth-child(odd){background-color:white;}
+		
+		
+		td{
+			
+			border:1px solid grey;
+			border-collapse: collapse;
+			margin-left:5px;
+			margin-right:5px;
+		}
+		table{
+			
+			border:none;
+			border-collapse: collapse;
+			margin-left:5%;
+		  
+		}
+		th{
+			background-color:#101f3d;
+			color:white;
+			
+			 padding-top: 12px;
+		  padding-bottom: 12px;
+		  padding-right:15px;
+		  
+		  width:50%;
+		  font-size: 18px;
+		  border:1px solid #101f3d ;
+		  
+		  
+			
+		}
+		
+		#formm{
+			width:50%;
+			float:right;
+			margin-right:10%;
+		}
+		fieldset{
+		  background-color:#f5f6fa;
+		 
+		  border:2px solid black;
+		}
+
+
+legend{
+	color:white;
+	background-color:#101f3d;
+	padding:5px 30px;
+}
+input[type=submit]{
+			 border-color:white;
+		  border-style:outset;
+		  outline: none;
+		  background-color:#101f3d;
+		  color:white;
+		  padding:6px 6px;
+		  font-weight:bold;
+		  font-size: 14px;
+		  width:100px;
+		  margin-left:15px;
+		  border-radius:12px;
+		  float:right;
+		}
+		input[type=submit]:hover{
+			 background-color: white;
+		  border-color:#101f3d;
+		  color:black;
+		}
+		

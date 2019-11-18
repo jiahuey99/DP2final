@@ -1,0 +1,185 @@
+*{
+	border-collapse: collapse;
+	font-family: Times New Roman;
+	
+}
+/*
+td,tr{
+	
+	height: 30px;
+	
+}
+
+th{
+	border:none;
+	color:white;
+	background-color: #101f3d;
+	font-size:20px;
+}
+#qtyitm
+{
+	width:45%;
+	text-align:left;
+	
+}
+
+th,td,tr{
+	text-align: left;
+	vertical-align: middle;
+	padding:10px;
+	
+}
+table{
+	border:1px solid black;
+	margin-left:auto;
+	margin-right:auto;
+	width:40%;
+}
+
+#total2{
+	border-top:1px solid grey;
+	background-color: white;
+	color:black;
+	font-size:20px;
+}
+
+.total{
+	border-top:1px solid black;
+	background-color: white;
+	font-weight:bold;
+	color:black;
+	font-size:20px;
+}
+
+
+
+.top{
+	border-top:1px solid black;
+}*/
+#title{
+	text-align:center;
+	border-bottom:1px solid black;
+	font-size:30px;
+	font-weight:bold;
+	padding-top:30px;
+}
+
+#clockDisplay{
+	margin-left:25%;
+	font-size:16px;
+	font-size:18px;
+	
+	
+}
+
+#fullbody{
+	width:30%;
+	margin-left:auto;
+	margin-right:auto;
+}
+#orderid{
+	width:30%;
+}
+#receive{
+	width:30%;
+	
+}
+
+		#btn{
+		  border-color:white;
+		  border-style:outset;
+		  outline: none;
+		  background-color:#101f3d;
+		  color:white;
+		  padding:6px 6px;
+		  font-weight:bold;
+		  font-size: 14px;
+		 
+		
+		  border-radius:12px;
+		
+		}
+		#btn:hover{
+			 background-color: white;
+		  border-color:#101f3d;
+		  color:black;
+		}
+		#member{
+			
+			
+			
+		}
+		
+		fieldset{
+			margin-top:3%;
+			margin-left:5%;
+	width:50%;
+	margin-left:auto;
+	margin-right:auto;
+	background-color:#f5f6fa;
+}
+legend{
+	color:white;
+	background-color:#101f3d;
+	padding:5px 30px;
+}
+td,tr{
+	border-left:1px solid black;
+	border-right:1px solid black;
+	
+	background-color:#f5f6fa;;
+}
+
+
+th{
+	  padding-top: 25px;
+		  padding-bottom: 12px;
+		  width:20%;
+		  font-size: 18px;
+		  color: white;
+		  background-color:#101f3d;
+		  padding:15px;
+		  border-bottom:1px solid black;
+		  border-right:1px solid black;
+		  
+	}
+	
+
+
+td,tr{
+	
+	text-align: center;
+	vertical-align: middle;
+	padding:4px;
+}
+table{
+	border:1px solid black;
+	width:40%;
+			border-collapse: collapse;
+			margin-left:30%;
+		  
+}
+#smallth{
+	width:15%
+}
+#bigth{
+	width:35%;
+}
+#total2{
+	background-color:white;
+}
+#total3{
+	background-color:white;
+}
+
+.total{
+	border-bottom:1px solid black;
+	background-color:#f5f6fa;
+	font-weight:bold;
+}
+
+
+
+.top{
+	border-top:1px solid black;
+}
