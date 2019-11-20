@@ -26,10 +26,10 @@
     foreach ($orderItems as $itemno => $orderItem) {
 		//discount
 		
-		$disamount = ($orderItem['price'] * $orderItem['quantity'])*($orderItem['discount']/100);
-        $subtotal = $orderItem['price'] * $orderItem['quantity']-$disamount;
-        $sql .= "INSERT INTO orderdb (orderid, itemno, qty, idtable, subtotal, discount, comment) 
-        VALUES ('$orderId','$orderItem[itemno]','$orderItem[quantity]','$tableid','$subtotal','$orderItem[discount]','$orderItem[comment]');";
+		$disamount = ($orderItem['price'] * $orderItem['quantity']);
+        $subtotal = $orderItem['price'] * $orderItem['quantity'];
+        $sql .= "INSERT INTO orderdb (orderid, itemno, qty, idtable, subtotal, comment) 
+        VALUES ('$orderId','$orderItem[itemno]','$orderItem[quantity]','$tableid','$subtotal','$orderItem[comment]');";
     }
 
 	

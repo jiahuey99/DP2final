@@ -25,13 +25,15 @@
 			if($conn->connect_error){
 				die("Connection failed:".$conn->connect_error);
             }
+
             $reserved = "Reserved";
-            echo"<table> <tr> <th> Table ID </th> <th> Date </th> <th> Time </th> <th> Status </th> </tr>";
+            echo"<table> <tr> <th> Reservation ID</th> <th> Table ID </th> <th> Date </th> <th> Time </th> <th> Status </th> </tr>";
             
-           $sqlres = mysqli_query($conn,"SELECT idtable,date,time FROM reservation"); 
+           $sqlres = mysqli_query($conn,"SELECT reservationid,idtable,date,time FROM reservation"); 
             while($rowres = $sqlres->fetch_assoc())
             {
-                echo "<tr> <td>".$rowres['idtable']."</td> <td>".$rowres['date']."</td><td>".$rowres['time']."</td><td>".$reserved."</td></tr>";
+                echo "<tr> <td>".$rowres['reservationid']."<td>".$rowres['idtable']."</td> <td>".$rowres['date']."</td><td>".$rowres['time']."</td><td>".$reserved."</td> <td id=icon> <a href='edit_reservation.php?reservationid=$rowres[reservationid]'> <img src='edit.png' width='30' height='30'></td>
+                </tr>";
             }
             echo"</table>";
 			echo "<h1>All Table Status :</h1>";
@@ -53,7 +55,7 @@
             INNER JOIN reservation r ON r.idtable = t.idtable)");
             while($rowfree = $sqlfree->fetch_assoc())
             {
-                echo "<tr> <td>".$rowfree['idtable']."</td><td>".$free."</td></tr>";
+                echo "<tr> <td>".$rowfree['idtable']."</td><td>".$free."</td> </tr>";
             }
             echo"</table>";
 ?>
