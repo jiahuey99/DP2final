@@ -7,11 +7,17 @@
 	if($abc->num_rows==0){
 		$sql = "INSERT INTO memberdb (idmember) VALUES ('$table_num');";
 		mysqli_query($conn,$sql);
+		echo '<script language="javascript">';
+		echo 'alert("Member Inserted.")';
+		echo '</script>';
 	}else{
-		die("The member has already exist");
+		echo '<script language="javascript">';
+		echo 'alert("Member Already Exist.")';
+		echo '</script>';
 	}
 	
 
-	header("Location: member.php?insert=success");
+	header( "refresh:0;url=member.php" );
+
 
 ?>

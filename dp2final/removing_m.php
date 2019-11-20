@@ -6,10 +6,16 @@
 	$abc = mysqli_query($conn,"SELECT * FROM memberdb WHERE idmember='$table_num'");
 	if($abc->num_rows!=0){
 		mysqli_query($conn,"DELETE FROM memberdb WHERE idmember='$table_num'");
+		echo '<script language="javascript">';
+		echo 'alert("Member Deleted.")';
+		echo '</script>';
 	}else{
-		die("The member does not exist");
+		echo '<script language="javascript">';
+		echo 'alert("Member Does not Exist.")';
+		echo '</script>';
 	}
 
 	
-	header("Location: member.php?delete=success");
+	header( "refresh:0;url=member.php" );
+
 ?>

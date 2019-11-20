@@ -7,11 +7,16 @@
 	if($abc->num_rows==0){
 		$sql = "INSERT INTO tabledb (idtable) VALUES ('$table_num');";
 		mysqli_query($conn,$sql);
+		echo '<script language="javascript">';
+		echo 'alert("Table Added")';
+		echo '</script>';
 	}else{
-		die("The table has already exist");
+		echo '<script language="javascript">';
+		echo 'alert("Table exist.")';
+		echo '</script>';
 	}
 	
 
-	header("Location: table.php?insert=success");
+	header( "refresh:0;url=table.php" );
 
 ?>
