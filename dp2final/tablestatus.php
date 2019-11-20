@@ -27,12 +27,12 @@
             }
 
             $reserved = "Reserved";
-            echo"<table> <tr> <th> Reservation ID</th> <th> Table ID </th> <th> Date </th> <th> Time </th> <th> Status </th> </tr>";
+            echo"<table> <tr> <th> Reservation ID</th> <th> Table ID <th>Name</th></th> <th> Date </th> <th> Time </th> <th> Status </th> </tr>";
             
-           $sqlres = mysqli_query($conn,"SELECT reservationid,idtable,date,time FROM reservation"); 
+           $sqlres = mysqli_query($conn,"SELECT reservationid,idtable,name,date,time FROM reservation"); 
             while($rowres = $sqlres->fetch_assoc())
             {
-                echo "<tr> <td>".$rowres['reservationid']."<td>".$rowres['idtable']."</td> <td>".$rowres['date']."</td><td>".$rowres['time']."</td><td>".$reserved."</td> <td id=icon> <a href='edit_reservation.php?reservationid=$rowres[reservationid]'> <img src='edit.png' width='30' height='30'></td>
+                echo "<tr> <td>".$rowres['reservationid']."<td>".$rowres['idtable']."</td> <td> ".$rowres['name']."</td> <td>".$rowres['date']."</td><td>".$rowres['time']."</td><td>".$reserved."</td> <td id=icon> <a href='edit_reservation.php?reservationid=$rowres[reservationid]'> <img src='edit.png' width='30' height='30'></td>
                 </tr>";
             }
             echo"</table>";
