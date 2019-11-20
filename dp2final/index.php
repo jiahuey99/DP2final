@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!doctype html>
 <html>
 <head>
@@ -89,6 +92,9 @@
 			
 				if($row['user']==$user && $row['pass']==$pass && $row['type']=='Admin')
 			{
+					session_start();
+					$_SESSION['is_login']=true;
+					$_SESSION['username']=$user;
 				//reading to other page
 				//link to next page menu
 				header("Location:homepage_admin.php");
@@ -97,6 +103,9 @@
 			}
 			else if($row['user']==$user && $row['pass']==$pass && $row['type']=='User')
 			{
+					session_start();
+					$_SESSION['is_login']=true;
+					$_SESSION['username']=$user;
 				//reading to other page
 				//link to next page menu
 				header("Location:homepage.php");

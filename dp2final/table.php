@@ -1,6 +1,21 @@
 <?php
 	include_once 'connection.php';
 ?>
+
+<?php
+session_start();
+	if($_SESSION['is_login'])
+	{
+		
+		$user=$_SESSION['username'];
+	}
+	else 
+	{
+		
+		header("location: index.php");
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>

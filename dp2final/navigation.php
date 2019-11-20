@@ -13,7 +13,7 @@
 	  <li class="vava"><a href="order_page.php">Order Details</a></li>
 	  <li class="vava"><a href="reservation.php">Reserve Table</a></li>
 	  <li class="vava"><a href="tablestatus.php">Table Status</a></li>
-	  <li class="tata"><a href="index.php">Log Out</a></li>
+	  <li class="tata"><a href="logout.php">Log Out</a></li>
 	  
 	  
 	</ul>

@@ -1,3 +1,18 @@
+<?php require "connection.php"; ?>
+<?php
+session_start();
+	if($_SESSION['is_login'])
+	{
+		
+		$user=$_SESSION['username'];
+	}
+	else 
+	{
+		
+		header("location: index.php");
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 	<title>Home</title>
@@ -83,7 +98,7 @@ function showSlides() {
 			<li><button id=detail onclick="window.location.href ='editmenu.php';">Edit / Remove Menu</button></li>
 			<li><button id=logout onclick="window.location.href ='table.php';">Manage Table</button></li>
 			<li><button id=logout onclick="window.location.href ='salesreportform.php';">Generate Sales Report</button></li>
-			<li><button id=logout onclick="window.location.href ='index.php';">Log Out</button></li>
+			<li><button id=logout onclick="window.location.href ='logout.php';">Log Out</button></li>
 			
 			</ul>
 			</div>

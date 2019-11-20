@@ -1,3 +1,18 @@
+<?php require "connection.php"; ?>
+<?php
+session_start();
+	if($_SESSION['is_login'])
+	{
+		
+		$user=$_SESSION['username'];
+	}
+	else 
+	{
+		
+		header("location: index.php");
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 	<title>Home</title>
@@ -9,6 +24,7 @@
 		
 	</head>
 	<body>
+		
 	<div class="slideshow-container">
 
 		<div class="mySlides fade">
@@ -80,7 +96,7 @@ function showSlides() {
 			<button id=new onclick="window.location.href ='menu1.php';">Take Order</button>
 			<button id=detail onclick="window.location.href ='order_page.php';" >Order Details</button>
 			<button id=logout onclick="window.location.href ='reservation.php';">Table Reservation</button>
-			<button id=logout onclick="window.location.href ='index.php';">Log Out</button>
+			<button id=logout onclick="window.location.href ='logout.php';">Log Out</button>
 			
 			</div>
 	</body>

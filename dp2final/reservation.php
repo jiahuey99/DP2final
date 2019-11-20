@@ -3,6 +3,20 @@
 	
 ?>
 
+<?php
+session_start();
+	if($_SESSION['is_login'])
+	{
+		
+		$user=$_SESSION['username'];
+	}
+	else 
+	{
+		
+		header("location: index.php");
+	}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -58,13 +72,6 @@ document.getElementById('timeid').value = e.target.value;
 function myFunctionTable(e) {
 	document.getElementById('tableid').value = e.target.value
 }
-
-function confirm_click()
-{
-return confirm("Are you sure you want to delete reservation?");
-}
-
-
 </script>
 </body>
 </html>

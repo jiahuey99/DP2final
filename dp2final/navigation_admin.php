@@ -14,7 +14,7 @@
 	  <li class="vava"><a href="table.php">Manage Table</a></li>
 	  <li class="vava"><a href="member.php">Manage Member</a></li>
 	  <li class="vava"><a href="salesreportform.php">Sales Report</a></li>
-	  <li class="tata"><a href="index.php">Log Out</a></li>
+	  <li class="tata"><a href="logout.php">Log Out</a></li>
 	  
 	</ul>
 	</div>
