@@ -1,23 +1,8 @@
-<?php require "connection.php"; ?>
-<?php
-session_start();
-	if($_SESSION['is_login'])
-	{
-		
-		$user=$_SESSION['username'];
-	}
-	else 
-	{
-		
-		header("location: index.php");
-	}
-?>
-
 <!DOCTYPE html>
 <html>
 <head>
 <title>Payment</title>
-<link rel="stylesheet" href="paymentsy.css?tta={random number/string}">
+<link rel="stylesheet" href="paymentsy.css?ta={random number/string}">
 </head>
 <header>
 	<?php include'navigation.php'?>
@@ -150,7 +135,7 @@ echo "<tr><td class='top'>".$orderid."</td>";
 Amount Receive:  <input type="text" name="amount" id = "amountt">
 <button id=btn type="button" onclick="calculate()">Calculate Balance</button><br>
 <p id ="balancee">Balance:</p><br>
-<?php echo"<form action = 'totransaction.php?'>  <input type='hidden' name='orderid' value='$orderid'><br><br>Member Name: <input type = 'text' name ='membername'><br><br><input id=btn type='submit' value='Submit Payment'></form>"?>
+<?php echo"<form action = 'totransaction.php?'>  <input type='hidden' name='orderid' value='$orderid'><br><br><p onclick='showing()'>Member Name [?] :</p><br><input type = 'text' name ='membername'><br><br><input id=btn type='submit' value='Submit Payment'><br><p id='hello'></p></form>"?>
 <br>
 </fieldset>
 <fieldset>
@@ -160,10 +145,11 @@ Amount Receive:  <input type="text" name="amount" id = "amountt">
 <?php echo "<input type='hidden' name='orderid' value='$orderid'>"?>
 <?php echo "<input type='hidden' name='amounttt' value='$float_total'>"; ?>
 <br>
-Member Name: <input type='text' name='mbbb'>
+<p onclick='showshow()'>Member Name [?] :</p><br><input type='text' name='mbbb'>
 <br><br>
 <input type='submit' id=btn value='Pay With MemberPoints'>
 <br>
+<p id='hehello'></p>
 </form>
 </fieldset>
 <script>
@@ -174,6 +160,14 @@ function calculate(){
 	document.getElementById("balancee").innerHTML = "Balance: RM "+ z + "<br>";
 	
 	
+}
+
+function showing(){
+	document.getElementById("hello").innerHTML = "**** For every RM 10, memberpoint of member will by added by 1 ****";
+}
+
+function showshow(){
+	document.getElementById("hehello").innerHTML = "**** Pay the whole bill with memberpoint with the rate of 10 points = RM 1 ****";
 }
 </script>
 </html>

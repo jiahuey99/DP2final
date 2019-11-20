@@ -25,7 +25,11 @@
 				}
 			} while($roww = $xx->fetch_assoc());
 			$pointadd = intval($mmm['memberpoint'])+intval($float_total/10);
+			$pointadded = intval($float_total/10);
 			$sql = "UPDATE memberdb SET memberpoint='$pointadd' WHERE idmember='$member'";
+			echo '<script language="javascript">';
+			echo "alert('Points Added to ".$mmm['idmember']." :".$pointadded."')";
+			echo '</script>';
 
 			if ($conn->query($sql) === FALSE) {
 				echo "Error updating record: " . $conn->error;
@@ -51,6 +55,9 @@
 
 	$sql = "INSERT INTO transaction (orderid,food,amount) VALUES ('$orderid','$food','$float_total');";
 	mysqli_query($conn,$sql);
+	echo '<script language="javascript">';
+	echo "alert('Transaction  Record Saved.')";
+	echo '</script>';
 	$dee = mysqli_query($conn,"SELECT * FROM transaction WHERE orderid='$orderid'");
 	if($dee->num_rows!=0){
 		mysqli_query($conn,"DELETE FROM orderdb WHERE orderid='$orderid'");
@@ -58,7 +65,7 @@
 	die("The transaction record does not exist.");
 	}
 	
-	header("Location: order_page.php?record=saved");
+	header( "refresh:0;url=order_page.php" );
 
 	
 
