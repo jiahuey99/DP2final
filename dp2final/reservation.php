@@ -59,6 +59,11 @@ function myFunctionTable(e) {
 	document.getElementById('tableid').value = e.target.value
 }
 
+function confirm_click()
+{
+return confirm("Are you sure you want to delete reservation?");
+}
+
 
 </script>
 </body>

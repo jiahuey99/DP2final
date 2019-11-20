@@ -23,7 +23,7 @@
         $sql .= "DELETE from orderdb WHERE orderid = ".$oid.";";
     
 
-    if ($conn->query($sql) === TRUE) { //Multi query ki jaga khali query and no need for itemnum above
+    if ($conn->query($sql) === TRUE) {
         header("Location: order_page.php");
     } else {
         echo "Error: " . $sql . "<br>" . $conn->error;

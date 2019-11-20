@@ -15,7 +15,12 @@
 <body>
 
 <?php include'navigation.php'?>
-
+<script type="text/javascript">
+function confirm_click()
+{
+return confirm("Are you sure you want to delete reservation?");
+}
+</script>
 <div id=title>Table Status</div>
 <br>
 <br>
@@ -32,7 +37,7 @@
            $sqlres = mysqli_query($conn,"SELECT reservationid,idtable,name,date,time FROM reservation"); 
             while($rowres = $sqlres->fetch_assoc())
             {
-                echo "<tr> <td>".$rowres['reservationid']."<td>".$rowres['idtable']."</td> <td> ".$rowres['name']."</td> <td>".$rowres['date']."</td><td>".$rowres['time']."</td><td>".$reserved."</td> <td id=icon> <a href='edit_reservation.php?reservationid=$rowres[reservationid]'> <img src='edit.png' width='30' height='30'></td>
+                echo "<tr> <td>".$rowres['reservationid']."<td>".$rowres['idtable']."</td> <td> ".$rowres['name']."</td> <td>".$rowres['date']."</td><td>".$rowres['time']."</td><td>".$reserved."</td> <td id=icon> <a href='edit_reservation.php?reservationid=$rowres[reservationid]'> <img src='edit.png' width='30' height='30'></td> <td id=icon> <a href='delete_reservation.php?reservationid=$rowres[reservationid]'onclick='return confirm_click();'> <img src='cross.png' width='30' height='30'></td>
                 </tr>";
             }
             echo"</table>";
