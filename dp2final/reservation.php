@@ -58,6 +58,8 @@ document.getElementById('timeid').value = e.target.value;
 function myFunctionTable(e) {
 	document.getElementById('tableid').value = e.target.value
 }
+
+
 </script>
 </body>
 </html>
